@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decodificador</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <script type="text/javascript" src="script.js"></script>
+</head>
+<body>
+    <header>
+        <img class="logotipo" src="img/logo.png" alt="logotipo da alura">
+    </header>
+    <main class="mensagem">
+        <section class="mensagem__entrada">
+            <div>
+                <textarea placeholder="Digite seu texto" class="mensagem__entrada__caixa" id="textoDescriptografado"></textarea>
+                <p><img src="img/exclamacao.png">Apenas letras minúsculas e sem acento.</p>
+            </div>
+            <div class="mensagem__entrada__botao">
+                <button class="mensagem__entrada__botaoCriptografar" onclick="criptografarTexto()">Criptografar</button>
+                <button class="mensagem__entrada__botaoDescriptografar" onclick="descriptografarTexto()">Descriptografar</button>
+            </div>
+        </section>
+        <section class="mensagem__saida">
+                <div class="mensagem__saida__caixa">
+                    <img src="img/caixa_resposta.png" class="mensagem__saida__imagem" id="imagemMensagemNaoEncontrada" alt="Nenhuma mensagem encontrada, Digite um texto que você deseja criptografar ou descriptografar.">
+                    <textarea class="mensagem__saida__final" id="mensagemFinal"></textarea>
+                    <button class="mensagem__saida__botaoCopiar" id="botaoCopiar" onclick="copiarMensagem()">Copiar</button>
+
+                </div>
+        </section>
+    </main>
+    <footer>
+        <p>Desenvolvido por Suélen Euzébio</p>
+    </footer>
+</body>
+</html>
