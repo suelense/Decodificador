@@ -44,8 +44,8 @@ body {
 
 .mensagem__entrada__botao {
     display: flex;
-    gap: 24px;
     justify-content: center;
+    gap: 24px;
 }
 
 .mensagem__botao {
@@ -100,6 +100,7 @@ body {
     background-color: #ffffff;
     border-color: #0A3871;
     display: none;
+    width: 90%;
 }
 
 @media (max-width: 1007px) {
@@ -108,8 +109,7 @@ body {
         padding: 80px 40px;
     }
 
-    .mensagem__entrada,
-    .mensagem__saida {
+    .mensagem__entrada, .mensagem__saida {
         width: 90%;
         margin: auto;
         margin-bottom: 40px;
@@ -125,20 +125,29 @@ body {
         padding: 80px 16px;
     }
 
-    .mensagem__entrada,
-    .mensagem__saida {
+    .mensagem__entrada, .mensagem__saida, .mensagem__entrada__botao, .mensagem__botao {
         width: 100%;
+    }
+
+    .mensagem__entrada__caixa {
+        height: 200px;
     }
 
     .mensagem__entrada__botao {
         display: block;
-        width: 100%;
     }
 
     .mensagem__botao {
-        width: 100%;
         margin: auto;
         margin-bottom: 20px;
+    }
+
+    .mensagem__saida {
+        height: 400px;
+    }
+
+    .mensagem__saida__final {
+        height: 300px;
     }
 
     .logotipo {
