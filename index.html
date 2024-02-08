@@ -10,23 +10,24 @@
 <body>
     <header>
         <img class="logotipo" src="img/logo.png" alt="logotipo da alura">
+        <h1 class="titulo">DECODIFICADOR</h1>
     </header>
     <main class="mensagem">
         <section class="mensagem__entrada">
             <div>
                 <textarea placeholder="Digite seu texto" class="mensagem__entrada__caixa" id="textoDescriptografado"></textarea>
-                <p><img src="img/exclamacao.png">Apenas letras minúsculas e sem acento.</p>
+                <p class="mensagem__entrada__alerta" id="mensagemAlerta"><img src="img/exclamacao.png">Apenas letras minúsculas e sem acento.</p>
             </div>
             <div class="mensagem__entrada__botao">
-                <button class="mensagem__entrada__botaoCriptografar" onclick="criptografarTexto()">Criptografar</button>
-                <button class="mensagem__entrada__botaoDescriptografar" onclick="descriptografarTexto()">Descriptografar</button>
+                <button class="mensagem__botao mensagem__entrada__botaoCriptografar" onclick="criptografarTexto()">Criptografar</button>
+                <button class="mensagem__botao mensagem__entrada__botaoDescriptografar" onclick="descriptografarTexto()">Descriptografar</button>
             </div>
         </section>
         <section class="mensagem__saida">
                 <div class="mensagem__saida__caixa">
                     <img src="img/caixa_resposta.png" class="mensagem__saida__imagem" id="imagemMensagemNaoEncontrada" alt="Nenhuma mensagem encontrada, Digite um texto que você deseja criptografar ou descriptografar.">
                     <textarea class="mensagem__saida__final" id="mensagemFinal"></textarea>
-                    <button class="mensagem__saida__botaoCopiar" id="botaoCopiar" onclick="copiarMensagem()">Copiar</button>
+                    <button class="mensagem__botao mensagem__saida__botaoCopiar" id="botaoCopiar" onclick="copiarMensagem()">Copiar</button>
 
                 </div>
         </section>

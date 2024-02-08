@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
+
 body {
     background-color: #F3F5FC;
     font-family: 'Inter', sans-serif;
@@ -9,6 +10,13 @@ body {
     padding: 40px 80px;
     width: 31.09px;
     height: 44px;
+}
+
+.titulo {
+    font-size: 50px;
+    margin: 0;
+    text-align: center;
+    color: #0A3871;
 }
 
 .mensagem {
@@ -30,28 +38,32 @@ body {
     border: #F3F5FC;
 }
 
+.mensagem__entrada__alerta {
+    font-size: 12px;
+}
+
 .mensagem__entrada__botao {
     display: flex;
-    height: 67px;
     gap: 24px;
     justify-content: center;
 }
 
-.mensagem__entrada__botaoCriptografar {
+.mensagem__botao {
     width: 45%;
+    height: 67px;
     font-size: 16px;
-    color: #ffffff;
-    background-color: #0A3871;
     border-radius: 24px;
 }
 
+.mensagem__entrada__botaoCriptografar {
+    color: #ffffff;
+    background-color: #0A3871;
+}
+
 .mensagem__entrada__botaoDescriptografar {
-    width: 45%;
-    font-size: 16px;
     color: #0A3871;
     background-color: #D8DFE8;
     border-color: #0A3871;
-    border-radius: 24px;
 }
 
 .mensagem__saida {
@@ -62,16 +74,15 @@ body {
 }
 
 .mensagem__saida__caixa {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     padding: 10px;
     gap: 8px;
-
+    text-align: center;
 }
 
 .mensagem__saida__imagem {
-    width: 100%;
+    max-height: 100%;
+    max-width: 100%;
+
 }
 
 .mensagem__saida__final {
@@ -85,11 +96,52 @@ body {
 }
 
 .mensagem__saida__botaoCopiar {
-    height: 67px;
-    font-size: 16px;
     color: #0A3871;
     background-color: #ffffff;
     border-color: #0A3871;
-    border-radius: 24px;
     display: none;
+}
+
+@media (max-width: 1007px) {
+    .mensagem {
+        display: block;
+        padding: 80px 40px;
+    }
+
+    .mensagem__entrada,
+    .mensagem__saida {
+        width: 90%;
+        margin: auto;
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 640px) {
+    .titulo {
+        font-size: 30px;
+    }
+
+    .mensagem {
+        padding: 80px 16px;
+    }
+
+    .mensagem__entrada,
+    .mensagem__saida {
+        width: 100%;
+    }
+
+    .mensagem__entrada__botao {
+        display: block;
+        width: 100%;
+    }
+
+    .mensagem__botao {
+        width: 100%;
+        margin: auto;
+        margin-bottom: 20px;
+    }
+
+    .logotipo {
+        padding: 24px 16px;
+    }
 }
